@@ -139,3 +139,20 @@ footer a { color: var(--accent); text-decoration: none; }
   .search input { max-width: 540px; font-size: 17px; }
   footer { margin-top: 40px; font-size: 15px; }
 }
+
+.hrow { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+.nbtitle { font-size: 38px; font-weight: 800; letter-spacing: -1px; margin: 0; line-height: 1.25; }
+.popchip { display: inline-block; font-family: Jua, sans-serif; font-weight: 400; background: #FAC775; color: #412402; border: 3px solid var(--text); border-radius: 12px; padding: 0 14px 2px; transform: rotate(-3deg); box-shadow: 4px 4px 0 var(--text); }
+.hero .catch { margin-top: 12px; }
+.search { margin: 0; flex: none; }
+.search input { border: 2.5px solid var(--text); border-radius: 10px; box-shadow: 4px 4px 0 var(--text); max-width: 240px; transition: transform 0.15s, box-shadow 0.15s; }
+.search input:focus { border-color: var(--text); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--text); }
+.issues a { border: 2.5px solid var(--text); border-radius: 14px; box-shadow: 5px 5px 0 var(--text); transition: transform 0.15s, box-shadow 0.15s; }
+.issues a:hover { border-color: var(--text); transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--text); }
+.dbar { display: block; font-family: Jua, sans-serif; font-size: 16px; letter-spacing: 0.5px; padding: 9px 16px 7px; border-bottom: 2.5px solid var(--text); background: var(--accent-soft); color: var(--accent); }
+.meta { border-top: 2px solid var(--text); }
+@media (min-width: 1100px) {
+  .nbtitle { font-size: 52px; }
+  .search input { max-width: 320px; font-size: 16px; }
+  .dbar { font-size: 18px; }
+}
