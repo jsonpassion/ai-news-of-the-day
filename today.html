@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI news of the day</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+</head>
+<body style="margin:0;background:#171613">
+<script>
+fetch('index.html').then(function(r){return r.text()}).then(function(t){
+var m=t.match(/days\/(\d{4}-\d{2}-\d{2})\.html/);
+location.replace(m?('days/'+m[1]+'.html'):'index.html');
+}).catch(function(){location.replace('index.html')});
+</script>
+<noscript><a href="index.html" style="color:#85b7eb">전체 호 보기</a></noscript>
+</body>
+</html>
