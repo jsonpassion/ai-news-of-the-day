@@ -10,7 +10,7 @@
 <script>
 fetch('index.html').then(function(r){return r.text()}).then(function(t){
 var m=t.match(/days\/(\d{4}-\d{2}-\d{2})\.html/);
-location.replace(m?('days/'+m[1]+'.html'):'index.html');
+location.replace(m?('days/'+m[1]+'.html#tv'):'index.html');
 }).catch(function(){location.replace('index.html')});
 </script>
 <noscript><a href="index.html" style="color:#85b7eb">전체 호 보기</a></noscript>

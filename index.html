@@ -3,18 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI news of the day</title>
-<meta property="og:title" content="AI news of the day">
-<meta property="og:description" content="최근 7일 사이 가장 화제가 된 AI 이슈를 매일 세 가지씩, 네 컷 만화와 함께 전해요.">
+<title>AI pop of the day</title>
+<meta property="og:title" content="AI pop of the day — AI 생생 정보통">
+<meta property="og:description" content="매일 오후 5시, 최근 7일 사이 가장 화제가 된 AI 이슈 세 가지를 네 컷 만화와 함께 전해요.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <main>
-<header class="masthead">
-<h1>AI news of the day</h1>
-<p class="tag">최근 7일 사이 가장 화제가 된 AI 이슈를 매일 세 가지씩, 네 컷 만화와 함께 전해요.</p>
+<header class="masthead hero">
+<h1>AI pop of the day</h1>
+<p class="catch">매일 오후 5시에 터지는 <strong>AI 생생 정보통</strong></p>
+<p class="tag">최근 7일 사이 가장 화제가 된 AI 이슈 세 가지를 네 컷 만화와 함께 전해요.</p>
+<img class="hero-duo" src="assets/duo.svg" alt="">
 </header>
+
+<div class="search">
+<input id="q" type="search" placeholder="이슈 검색 (예: Kimi, 에이전트, 애플)" aria-label="이슈 검색">
+</div>
 
 <ol class="issues">
 <!-- NEW_ISSUE -->
@@ -23,10 +29,25 @@
 <span class="meta"><span class="d">2026-07-29</span><span class="t">에이전트 64개의 코드 이전, Kimi-K3 공개, 바티칸의 AI 윤리 기준</span></span>
 </a></li>
 </ol>
+<p class="noresult" id="noresult" hidden>검색 결과가 없어요.</p>
 
 <footer>
 <p>매일 오후 5시에 발행해요.</p>
 </footer>
 </main>
+<script>
+var q=document.getElementById('q');
+var empty=document.getElementById('noresult');
+q.addEventListener('input',function(){
+var v=q.value.trim().toLowerCase();
+var shown=0;
+document.querySelectorAll('.issues li').forEach(function(li){
+var hit=!v||li.textContent.toLowerCase().indexOf(v)>-1;
+li.style.display=hit?'':'none';
+if(hit)shown++;
+});
+empty.hidden=shown>0;
+});
+</script>
 </body>
 </html>

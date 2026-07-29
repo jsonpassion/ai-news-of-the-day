@@ -86,6 +86,17 @@ footer a { color: var(--accent); text-decoration: none; }
 .strip .panel:nth-child(4) .bub + .bub { animation-delay: 2.4s; }
 @media (prefers-reduced-motion: reduce) { .strip .bub { animation: none; } }
 
+.hero .catch { font-size: 17px; margin: 4px 0 0; }
+.hero .catch strong { color: var(--accent); font-weight: 700; }
+.hero .tag { margin-top: 6px; }
+.hero-duo { width: 210px; height: 54px; display: block; margin-top: 16px; }
+.search { margin: 24px 0 18px; }
+.search input { width: 100%; max-width: 440px; padding: 10px 14px; font-size: 15px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text); outline: none; font-family: inherit; }
+.search input::placeholder { color: var(--muted); }
+.search input:focus { border-color: var(--accent); }
+.noresult { color: var(--muted); font-size: 14px; }
+.tv .home, .tv footer { display: none; }
+
 @media (min-width: 1100px) {
   main { max-width: 1720px; padding: 48px 64px 56px; }
   .masthead { display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 30px; }
@@ -109,5 +120,8 @@ footer a { color: var(--accent); text-decoration: none; }
   .card h2 { font-size: 24px; margin-bottom: 12px; }
   .card p { font-size: 18.5px; line-height: 1.7; }
   .issues { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+  .hero { display: block; }
+  .hero .catch { font-size: 24px; }
+  .search input { max-width: 540px; font-size: 17px; }
   footer { margin-top: 40px; font-size: 15px; }
 }
