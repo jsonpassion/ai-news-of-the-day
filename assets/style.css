@@ -87,7 +87,9 @@ main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
 
 footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
 footer a { color: var(--accent); text-decoration: none; }
-footer.contact a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+main { min-height: 100svh; display: flex; flex-direction: column; }
+footer.contact { margin-top: auto; padding: 48px 0 0; border-top: none; text-align: center; }
+footer.contact a { color: var(--muted); text-decoration: none; }
 footer.contact a:hover { color: var(--accent); }
 
 @keyframes pop { from { opacity: 0; transform: scale(0.85) translateY(4px); } to { opacity: 1; transform: none; } }
