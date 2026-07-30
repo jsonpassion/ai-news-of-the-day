@@ -145,6 +145,7 @@ footer.contact a:hover { color: var(--accent); }
 }
 
 .hrow { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+.masthead .nbtitle { margin: 0 0 6px; }
 .nbtitle { font-size: 38px; font-weight: 800; letter-spacing: -1px; margin: 0; line-height: 1.25; }
 .popchip { display: inline-block; font-family: Jua, sans-serif; font-weight: 400; background: #FAC775; color: #412402; border: 3px solid var(--text); border-radius: 12px; padding: 0 14px 2px; transform: rotate(-3deg); box-shadow: 4px 4px 0 var(--text); }
 .hero .catch { margin-top: 12px; }
