@@ -9,8 +9,11 @@
 <body style="margin:0;background:#171613">
 <script>
 fetch('index.html').then(function(r){return r.text()}).then(function(t){
-var m=t.match(/days\/(\d{4}-\d{2}-\d{2})\.html/);
-location.replace(m?('days/'+m[1]+'.html#tv'):'index.html');
+var today=new Date(Date.now()+324e5).toISOString().slice(0,10);
+var all=t.match(/days\/(\d{4}-\d{2}-\d{2})\.html/g)||[];
+var d=null;
+for(var i=0;i<all.length;i++){var v=all[i].slice(5,15);if(v<=today){d=v;break}}
+location.replace(d?('days/'+d+'.html#tv'):'index.html');
 }).catch(function(){location.replace('index.html')});
 </script>
 <noscript><a href="index.html" style="color:#85b7eb">전체 호 보기</a></noscript>

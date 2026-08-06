@@ -71,6 +71,15 @@
 <span class="meta"><span class="t">교수의 AI 함정 시험, Kimi-K3 공개, 에이전트 64개의 코드 이전</span></span>
 </a></li>
 </ol>
+<script>
+(function(){
+var today=new Date(Date.now()+324e5).toISOString().slice(0,10);
+document.querySelectorAll('.issues li').forEach(function(li){
+var d=li.querySelector('.dbar');
+if(d&&d.textContent.trim()>today)li.remove();
+});
+})();
+</script>
 <p class="noresult" id="noresult" hidden>검색 결과가 없어요.</p>
 
 <footer class="contact">
